@@ -6,7 +6,7 @@ cd "$repo_root"
 
 fail=0
 
-required=("README.md" "blogs" "clippings" "covers" "文章生产关系图谱.md")
+required=("README.md" "blogs" "clippings" "covers" "automation/ai-research/task-prompt.md" "editorial/editorial-guidelines.md" "文章生产关系图谱.md")
 for path in "${required[@]}"; do
   if [[ ! -e "$path" ]]; then
     printf 'Missing required public path: %s\n' "$path" >&2
@@ -14,8 +14,8 @@ for path in "${required[@]}"; do
   fi
 done
 
-if rg -n '/Users/|iCloud~|file://|BEGIN (RSA|OPENSSH|EC) PRIVATE KEY|sk-[A-Za-z0-9_-]{16,}|gh[opusr]_[A-Za-z0-9]{16,}|AKIA[0-9A-Z]{16}' \
-  README.md PUBLISHING.md blogs clippings 文章生产关系图谱.md; then
+if rg -n --glob '!**/scripts/**' '/Users/|iCloud~|file://|BEGIN (RSA|OPENSSH|EC) PRIVATE KEY|sk-[A-Za-z0-9_-]{16,}|gh[opusr]_[A-Za-z0-9]{16,}|AKIA[0-9A-Z]{16}' \
+  README.md PUBLISHING.md AGENTS.md automation editorial blogs clippings 文章生产关系图谱.md; then
   printf 'Potential private path or secret found.\n' >&2
   fail=1
 fi
@@ -44,4 +44,5 @@ if [[ "$fail" -ne 0 ]]; then
   exit 1
 fi
 
+./automation/ai-research/scripts/validate.sh
 printf 'Public repository checks passed.\n'

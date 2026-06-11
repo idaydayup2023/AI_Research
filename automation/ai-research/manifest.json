@@ -1,0 +1,14 @@
+{
+  "automation_id": "ai-research",
+  "name": "每日 AI Research 博客摘录",
+  "package_version": "1.0.0",
+  "updated": "2026-06-11",
+  "task_prompt": "automation/ai-research/task-prompt.md",
+  "config": "automation/ai-research/config.json",
+  "loop_protocol": "automation/ai-research/loop-protocol.md",
+  "editorial_guidelines": "editorial/editorial-guidelines.md",
+  "canonical_memory": "editorial/memory/ai-research-memory.md",
+  "relationship_graph": "文章生产关系图谱.md",
+  "runtime_memory": "$CODEX_HOME/automations/ai-research/memory.md",
+  "local_version_file": "$CODEX_HOME/automations/ai-research/task-version.txt"
+}

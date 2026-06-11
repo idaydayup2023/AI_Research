@@ -1,0 +1,20 @@
+{
+  "timezone": "local",
+  "recommended_schedule": "08:30",
+  "max_arxiv_papers_per_day": 5,
+  "max_blog_posts_per_day": 3,
+  "default_min_blog_posts_per_day": 1,
+  "cover_aspect_ratio": 2.35,
+  "cover_ratio_tolerance_percent": 1.0,
+  "official_sources": [
+    "https://research.perplexity.ai/",
+    "https://claude.com/blog",
+    "https://www.anthropic.com/news",
+    "https://www.anthropic.com/research",
+    "https://deepmind.google/blog/",
+    "https://research.google/blog/",
+    "https://blog.google/technology/ai/",
+    "https://blog.google/innovation-and-ai/models-and-research/"
+  ],
+  "arxiv_categories": ["cs.AI", "cs.CL", "cs.LG", "cs.MA", "cs.RO", "stat.ML"]
+}

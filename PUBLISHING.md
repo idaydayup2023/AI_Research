@@ -48,11 +48,10 @@ git diff
 
 ```bash
 git add README.md PUBLISHING.md AGENTS.md .gitignore .gitattributes \
-  LICENSE-CONTENT LICENSE-CODE scripts blogs clippings covers \
+  LICENSE-CONTENT LICENSE-CODE scripts automation editorial blogs clippings covers \
   文章生产关系图谱.md
 git commit -m "Publish AI Research update"
 git push origin main
 ```
 
 维护者也可以按实际变更显式选择文件，不应使用未经检查的全目录自动提交。
-
